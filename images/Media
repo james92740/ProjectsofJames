@@ -1,0 +1,11 @@
+# Navigate to your project directory
+cd path/to/your/repo
+
+# Stage your changes
+git add .
+
+# Commit the changes with a message
+git commit -m "Add new folder for images and initial files"
+
+# Push the changes to the remote repository
+git push origin main

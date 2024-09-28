@@ -1,0 +1,70 @@
+# James's Project Portfolio
+
+Welcome to my personal project portfolio! This repository showcases various projects I've worked on, ranging from custom-built items to innovative engineering solutions. Below are details of some completed projects, and there are placeholders for future ones.
+
+## Current Projects
+
+### 1. Custom Fiberglass Paddleboard
+- **Overview:** A handcrafted paddleboard designed using fiberglass and epoxy resin for enhanced durability and strength.
+- **Materials:** Fiberglass, epoxy resin, foam core.
+- **Challenges:** Achieving a hydrodynamic shape while maintaining light weight for ease of use.
+- **Outcome:** Successfully tested in real-world environments, demonstrating strong buoyancy and excellent maneuverability.
+- **Processes:** Here is a YouTube video showing all the steps of my process: https://youtu.be/_GtcM2HTvBo
+
+### 2. Composite Ping Pong Paddle
+- **Overview:** A custom-built ping pong paddle created from carbon fiber composite material for optimized power and control.
+- **Materials:** Carbon fiber, epoxy resin, aramid honeycomb, 3D-printed TPU grips.
+- **Challenges:** Weight optimization for improved spin control and balance.
+- **Outcome:** High-performance paddle offering superior control and spin during play, tailored for competitive use.
+- **Processes:** I used a vacuum sealer to properly cure the epoxy and a waterjet to cut my SOLIDOWORKS paddle model. I then ordered rubber pads and Butterfly tape to wrap around the outer diameter. 
+
+### 3. Autonomous Boat (RobotX Senior Design Project)
+- **Overview:** Developed a fully autonomous boat for the RobotX competition using ROS and Raspberry Pi for sensor integration.
+- **Technologies:** Raspberry Pi, ROS, sensor fusion, GPS, LIDAR.
+- **Challenges:** Navigation accuracy and sensor calibration to ensure autonomous operation.
+- **Outcome:** Successfully demonstrated remote control capabilities and made significant progress toward full autonomy, with ongoing efforts focused on implementing machine learning for object recognition and enhanced autonomous operation.
+
+### 4. Automated Chicken Coop Door
+- **Overview:** Designed and built an automated chicken coop door system controlled by an Arduino, which operates based on daylight detection.
+- **Materials & Tech:** Arduino, motorized actuator, light sensors.
+- **Challenges:** Reliable operation in outdoor conditions, ensuring the system functions regardless of weather.
+- **Outcome:** The system operates consistently, reducing the manual workload for chicken owners, providing a reliable solution.
+
+### 5. CrawFloat Monitor (In Progress)
+- **Overview:** A floating sensor device designed to monitor crawfish pond environmental factors such as water depth, pH, temperature, O2, and TDS levels.
+- **Technologies:** Arduino/ESP32, TDS sensors, pH sensors, temperature probes, O2 sensors.
+- **Challenges:** Ensuring sensor reliability and real-time data transmission over long distances.
+- **Outcome:** (Ongoing) – Aims to revolutionize water quality management for crawfish farmers.
+
+### 6. Mystery Design Competition
+- **Overview:** Created a cost-effective device in one week, winning a competition by satisfying unique constraints on budget, size, and performance.
+- **Technologies:** Utilized rapid prototyping techniques and mechanical systems within a $100 budget.
+- **Challenges:** Designed the device to fit on an average-sized table while executing precise performance tasks.
+- **Outcome:** Won first place by meeting all constraints and outperforming other entries.
+
+### 7. Robotics Competition
+- **Overview:** Engineered a winning robot using a Python microcontroller, designed to meet all competition requirements.
+- **Technologies:** Python for microcontroller programming, sensor integration, and mechanical design.
+- **Challenges:** Developed logic for robot control and sensor navigation in the competition environment.
+- **Outcome:** Achieved competition goals, securing the winning position.
+
+---
+
+## Future Projects (To be Updated)
+
+
+### 8. **[Project Name Placeholder]**
+- **Overview:** Brief description here.
+
+### 9. **[Project Name Placeholder]**
+- **Overview:** Brief description here.
+
+### 10. **[Project Name Placeholder]**
+- **Overview:** Brief description here.
+
+---
+
+Feel free to explore my projects! I’m always working on new ideas and enjoy collaborations, so don’t hesitate to reach out.
+
+
+

@@ -1,145 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>James's Projects</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    header {
-      background-color: #0077b6;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-    section {
-      margin: 30px auto;
-      max-width: 900px;
-    }
-    .project {
-      background-color: #e1e5f2;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .project h2 {
-      font-size: 1.8em;
-      color: #0077b6;
-    }
-    .project p {
-      font-size: 1.2em;
-      margin: 10px 0;
-    }
-    .media {
-      margin: 15px 0;
-      text-align: center;
-    }
-    .media img, .media video {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .profile-picture {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin: 20px;
+        }
+        nav {
+            text-align: center;
+            margin: 20px;
+        }
+        nav select {
+            font-size: 1.2em;
+            padding: 10px;
+        }
+        section {
+            margin: 20px auto;
+            max-width: 900px;
+            display: none; /* Hide sections by default */
+        }
+        .project {
+            background-color: #e1e5f2;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .project h2 {
+            color: #0077b6;
+        }
+    </style>
+    <script>
+        function showProject(projectId) {
+            // Hide all project sections
+            const projects = document.querySelectorAll('section');
+            projects.forEach(project => {
+                project.style.display = 'none';
+            });
+            // Show selected project
+            const selectedProject = document.getElementById(projectId);
+            if (selectedProject) {
+                selectedProject.style.display = 'block';
+            }
+        }
+    </script>
 </head>
 <body>
 
 <header>
-  <h1>James's Projects</h1>
+    <h1>James's Portfolio</h1>
+    <img src="your-photo.png" alt="James's Photo" class="profile-picture">
 </header>
 
-<section>
-  <div class="project">
-    <h2>1. Custom Fiberglass Paddleboard</h2>
-    <p><strong>Overview:</strong> Designed and built a custom fiberglass paddleboard using composite materials for lightweight, durable performance.</p>
-    <p><strong>Challenges:</strong> Working with fiberglass to ensure a smooth finish and structural integrity.</p>
-    <p><strong>Outcome:</strong> Successfully created a board ideal for high-performance use, learning advanced composite techniques.</p>
-    <div class="media">
-      <img src="paddle1.jpg" alt="Custom Paddleboard">
-    </div>
-  </div>
+<nav>
+    <select onchange="showProject(this.value)">
+        <option value="">Select a Project</option>
+        <option value="project1">Custom Fiberglass Paddleboard</option>
+        <option value="project2">Composite Ping Pong Paddle</option>
+        <option value="project3">Automated Chicken Coop Door</option>
+        <option value="project4">Autonomous Boat for RobotX</option>
+        <option value="project5">CrawFloat Monitor</option>
+        <option value="project6">Mystery Design Competition</option>
+        <option value="project7">Robotics Competition</option>
+    </select>
+</nav>
 
-  <div class="project">
+<section id="project1" class="project">
+    <h2>1. Custom Fiberglass Paddleboard</h2>
+    <p><strong>Overview:</strong> Designed and built a custom fiberglass paddleboard using composite materials.</p>
+    <p><strong>Challenges:</strong> Working with fiberglass to ensure a smooth finish and structural integrity.</p>
+    <p><strong>Outcome:</strong> Successfully created a board ideal for high-performance use.</p>
+    <div class="media">
+        <img src="paddle1.jpg" alt="Custom Paddleboard" style="max-width: 100%;">
+    </div>
+</section>
+
+<section id="project2" class="project">
     <h2>2. Composite Ping Pong Paddle</h2>
-    <p><strong>Overview:</strong> Developed a high-performance ping pong paddle with composite materials and a 3D printed grip.</p>
+    <p><strong>Overview:</strong> Developed a high-performance ping pong paddle with a composite body.</p>
     <p><strong>Challenges:</strong> Designing for grip and balance while ensuring durability.</p>
     <p><strong>Outcome:</strong> Produced a functional and ergonomic paddle that improves playability.</p>
     <div class="media">
-      <img src="pong1.jpg" alt="Custom Ping Pong Paddle">
+        <img src="pong1.jpg" alt="Custom Ping Pong Paddle" style="max-width: 100%;">
     </div>
-  </div>
+</section>
 
-  <div class="project">
+<section id="project3" class="project">
     <h2>3. Automated Chicken Coop Door</h2>
-    <p><strong>Overview:</strong> Designed an Arduino-controlled automated door system for a chicken coop, opening and closing based on time.</p>
+    <p><strong>Overview:</strong> Designed an Arduino-controlled automated door system for a chicken coop.</p>
     <p><strong>Challenges:</strong> Ensuring reliability and smooth operation in all weather conditions.</p>
-    <p><strong>Outcome:</strong> A fully functional automated door system, making poultry management easier.</p>
+    <p><strong>Outcome:</strong> A fully functional automated door system.</p>
     <div class="media">
-      <!-- Add coop door images/videos here -->
+        <!-- Add coop door images/videos here -->
     </div>
-  </div>
+</section>
 
-  <div class="project">
+<section id="project4" class="project">
     <h2>4. Autonomous Boat for RobotX</h2>
-    <p><strong>Overview:</strong> Built and programmed a Raspberry Pi-controlled autonomous boat for participation in the RobotX competition.</p>
+    <p><strong>Overview:</strong> Built and programmed an autonomous boat for the RobotX competition.</p>
     <p><strong>Challenges:</strong> Integrating sensors and autonomous navigation systems.</p>
-    <p><strong>Outcome:</strong> Demonstrated remote control and advanced autonomy, continuously improving object recognition.</p>
+    <p><strong>Outcome:</strong> Demonstrated remote control and advanced autonomy.</p>
     <div class="media">
-      <!-- Add autonomous boat images/videos here -->
+        <!-- Add autonomous boat images/videos here -->
     </div>
-  </div>
+</section>
 
-  <div class="project">
+<section id="project5" class="project">
     <h2>5. CrawFloat Monitor (In Progress)</h2>
-    <p><strong>Overview:</strong> A floating sensor device designed to monitor crawfish pond environmental factors such as water depth, pH, temperature, O2, and TDS levels.</p>
-    <p><strong>Challenges:</strong> Ensuring sensor reliability and real-time data transmission over long distances.</p>
-    <p><strong>Outcome:</strong> (Ongoing) – Aims to revolutionize water quality management for crawfish farmers.</p>
+    <p><strong>Overview:</strong> A floating sensor device for monitoring crawfish pond conditions.</p>
+    <p><strong>Challenges:</strong> Ensuring sensor reliability and real-time data transmission.</p>
+    <p><strong>Outcome:</strong> (Ongoing) – Aims to revolutionize water quality management.</p>
     <div class="media">
-      <!-- Add CrawFloat Monitor images/videos here -->
+        <!-- Add CrawFloat Monitor images/videos here -->
     </div>
-  </div>
+</section>
 
-  <div class="project">
+<section id="project6" class="project">
     <h2>6. Mystery Design Competition</h2>
-    <p><strong>Overview:</strong> Created a cost-effective device in one week, winning a competition by meeting all constraints on budget, size, and performance.</p>
-    <p><strong>Challenges:</strong> Innovated within a $100 budget to achieve precise performance tasks in a small device footprint.</p>
-    <p><strong>Outcome:</strong> Won first place by meeting all design constraints.</p>
+    <p><strong>Overview:</strong> Created a cost-effective device that won a design competition.</p>
+    <p><strong>Challenges:</strong> Innovated within budget constraints.</p>
+    <p><strong>Outcome:</strong> Won first place by meeting all design requirements.</p>
     <div class="media">
-      <!-- Add Mystery Design images/videos here -->
+        <!-- Add Mystery Design images/videos here -->
     </div>
-  </div>
+</section>
 
-  <div class="project">
+<section id="project7" class="project">
     <h2>7. Robotics Competition</h2>
-    <p><strong>Overview:</strong> Engineered a winning robot with a Python microcontroller, designed to meet all competition requirements.</p>
-    <p><strong>Challenges:</strong> Developed control logic for sensors and navigation in a challenging competition environment.</p>
-    <p><strong>Outcome:</strong> Secured winning position by delivering a high-performing robot.</p>
+    <p><strong>Overview:</strong> Engineered a winning robot for a robotics competition.</p>
+    <p><strong>Challenges:</strong> Developed control logic for sensors.</p>
+    <p><strong>Outcome:</strong> Secured winning position with a high-performing robot.</p>
     <div class="media">
-      <!-- Add Robotics Competition images/videos here -->
+        <!-- Add Robotics Competition images/videos here -->
     </div>
-  </div>
-
-  <!-- Additional project slots for future use -->
-  <div class="project">
-    <h2>8. (Project Title)</h2>
-    <p><strong>Overview:</strong> (Project description)</p>
-    <p><strong>Challenges:</strong> (Challenges faced during the project)</p>
-    <p><strong>Outcome:</strong> (Outcome of the project)</p>
-    <div class="media">
-      <!-- Add project images/videos here -->
-    </div>
-  </div>
 </section>
 
 </body>
 </html>
-

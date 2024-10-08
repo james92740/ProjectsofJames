@@ -7,13 +7,13 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #e0f7fa; /* Light Cyan Background */
+      background-color: #f4f4f9;
       margin: 0;
       padding: 0;
       color: #333;
     }
     header {
-      background-color: #0077b6; /* Blue Header */
+      background-color: #0077b6;
       color: white;
       padding: 20px;
       text-align: center;
@@ -23,30 +23,25 @@
       margin: 0;
     }
     nav {
-      background-color: #00bcd4; /* Bright Cyan for Navigation */
-      overflow: hidden;
-    }
-    nav a {
-      float: left;
-      display: block;
-      color: white;
+      margin: 20px auto;
       text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
     }
-    nav a:hover {
-      background-color: #0097a7; /* Darker Cyan on Hover */
+    nav select {
+      padding: 10px;
+      font-size: 1.2em;
     }
     section {
       margin: 30px auto;
       max-width: 900px;
+      text-align: center;
     }
     .project {
-      background-color: #f1f8e9; /* Light Green Background */
+      background-color: #e1e5f2;
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: left; /* Keep text aligned left within the project box */
     }
     .project h2 {
       font-size: 1.8em;
@@ -58,21 +53,35 @@
     }
     .media {
       margin: 15px 0;
-      text-align: center;
+      display: flex;
+      justify-content: center; /* Center the media images */
+      gap: 10px; /* Space between images */
     }
-    .media img, .media video {
-      max-width: 100%;
+    .media img {
+      max-width: 300px; /* Set a maximum width for images */
       border-radius: 10px;
     }
-    .profile {
-      text-align: center;
-      margin: 20px;
-    }
-    .profile img {
-      width: 150px; /* Adjust size as necessary */
-      border-radius: 50%;
+    .profile-pic {
+      width: 200px; /* Adjust as necessary */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 50%; /* Optional: make the photo circular */
     }
   </style>
+  <script>
+    function navigateToProject(project) {
+      // Simple navigation to each project section
+      const sections = {
+        "Custom Fiberglass Paddleboard": "paddleboard",
+        "Composite Ping Pong Paddle": "pingpong",
+        "Automated Chicken Coop Door": "coopdoor",
+        "Autonomous Boat for RobotX": "robotx",
+        "CrawFloat Monitor": "crawfloat",
+        "Mystery Design Competition": "mystery",
+        "Robotics Competition": "robotics",
+      };
+      window.location.hash = sections[project];
+    }
+  </script>
 </head>
 <body>
 
@@ -81,18 +90,22 @@
 </header>
 
 <nav>
-  <a href="#paddleboard">Custom Paddleboard</a>
-  <a href="#pingpong">Composite Paddle</a>
-  <a href="#coop">Automated Coop</a>
-  <a href="#boat">Autonomous Boat</a>
-  <a href="#crawfloat">CrawFloat</a>
-  <a href="#mystery">Mystery Design</a>
-  <a href="#robotics">Robotics</a>
+  <select onchange="navigateToProject(this.value)">
+    <option value="">Select a project...</option>
+    <option value="Custom Fiberglass Paddleboard">Custom Fiberglass Paddleboard</option>
+    <option value="Composite Ping Pong Paddle">Composite Ping Pong Paddle</option>
+    <option value="Automated Chicken Coop Door">Automated Chicken Coop Door</option>
+    <option value="Autonomous Boat for RobotX">Autonomous Boat for RobotX</option>
+    <option value="CrawFloat Monitor">CrawFloat Monitor</option>
+    <option value="Mystery Design Competition">Mystery Design Competition</option>
+    <option value="Robotics Competition">Robotics Competition</option>
+  </select>
 </nav>
 
 <section>
-  <div class="profile">
-    <img src="images/your-photo.png" alt="Your Photo"> <!-- Ensure the correct path -->
+  <div class="media">
+    <img src="your-photo.png" alt="Your Photo" class="profile-pic">
+    <img src="you-photo2.png" alt="Your Photo 2" class="profile-pic">
   </div>
 
   <div class="project" id="paddleboard">
@@ -101,7 +114,8 @@
     <p><strong>Challenges:</strong> Working with fiberglass to ensure a smooth finish and structural integrity.</p>
     <p><strong>Outcome:</strong> Successfully created a board ideal for high-performance use, learning advanced composite techniques.</p>
     <div class="media">
-      <img src="images/paddle1.jpg" alt="Custom Paddleboard">
+      <img src="paddle1.jpg" alt="Custom Paddleboard">
+      <img src="paddle2.jpg" alt="Custom Paddleboard 2">
     </div>
   </div>
 
@@ -111,12 +125,60 @@
     <p><strong>Challenges:</strong> Designing for grip and balance while ensuring durability.</p>
     <p><strong>Outcome:</strong> Produced a functional and ergonomic paddle that improves playability.</p>
     <div class="media">
-      <img src="images/pong1.jpg" alt="Custom Ping Pong Paddle">
+      <img src="pong1.jpg" alt="Custom Ping Pong Paddle">
+      <img src="pong2.jpg" alt="Custom Ping Pong Paddle 2">
     </div>
   </div>
 
-  <!-- Add other project sections similarly -->
+  <div class="project" id="coopdoor">
+    <h2>3. Automated Chicken Coop Door</h2>
+    <p><strong>Overview:</strong> Designed an Arduino-controlled automated door system for a chicken coop, opening and closing based on time.</p>
+    <p><strong>Challenges:</strong> Ensuring reliability and smooth operation in all weather conditions.</p>
+    <p><strong>Outcome:</strong> A fully functional automated door system, making poultry management easier.</p>
+    <div class="media">
+      <!-- Add coop door images/videos here -->
+    </div>
+  </div>
 
+  <div class="project" id="robotx">
+    <h2>4. Autonomous Boat for RobotX</h2>
+    <p><strong>Overview:</strong> Built and programmed a Raspberry Pi-controlled autonomous boat for participation in the RobotX competition.</p>
+    <p><strong>Challenges:</strong> Integrating sensors and autonomous navigation systems.</p>
+    <p><strong>Outcome:</strong> Demonstrated remote control and advanced autonomy, continuously improving object recognition.</p>
+    <div class="media">
+      <!-- Add autonomous boat images/videos here -->
+    </div>
+  </div>
+
+  <div class="project" id="crawfloat">
+    <h2>5. CrawFloat Monitor (In Progress)</h2>
+    <p><strong>Overview:</strong> A floating sensor device designed to monitor crawfish pond environmental factors such as water depth, pH, temperature, O2, and TDS levels.</p>
+    <p><strong>Challenges:</strong> Ensuring sensor reliability and real-time data transmission over long distances.</p>
+    <p><strong>Outcome:</strong> (Ongoing) – Aims to revolutionize water quality management for crawfish farmers.</p>
+    <div class="media">
+      <!-- Add CrawFloat Monitor images/videos here -->
+    </div>
+  </div>
+
+  <div class="project" id="mystery">
+    <h2>6. Mystery Design Competition</h2>
+    <p><strong>Overview:</strong> Created a cost-effective device in one week, winning a competition by meeting all constraints on budget, size, and performance.</p>
+    <p><strong>Challenges:</strong> Innovated within a $100 budget to achieve precise performance tasks in a small device footprint.</p>
+    <p><strong>Outcome:</strong> Won first place by meeting all design constraints.</p>
+    <div class="media">
+      <!-- Add Mystery Design images/videos here -->
+    </div>
+  </div>
+
+  <div class="project" id="robotics">
+    <h2>7. Robotics Competition</h2>
+    <p><strong>Overview:</strong> Engineered a winning robot with a Python microcontroller, designed to meet all competition requirements.</p>
+    <p><strong>Challenges:</strong> Developed control logic for sensors and navigation in a challenging competition environment.</p>
+    <p><strong>Outcome:</strong> Secured winning position by delivering a high-performing robot.</p>
+    <div class="media">
+      <!-- Add Robotics Competition images/videos here -->
+    </div>
+  </div>
 </section>
 
 </body>

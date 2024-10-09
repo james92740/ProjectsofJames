@@ -26,9 +26,14 @@
       margin: 20px auto;
       text-align: center;
     }
-    nav select {
-      padding: 10px;
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0077b6;
       font-size: 1.2em;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     section {
       margin: 30px auto;
@@ -58,7 +63,8 @@
       gap: 10px; /* Space between images */
     }
     .media img {
-      max-width: 300px; /* Set a maximum width for images */
+      max-width: 100%; /* Set a maximum width for images */
+      height: auto; /* Maintain aspect ratio */
       border-radius: 10px;
     }
     .profile-pic {
@@ -89,16 +95,13 @@
 </header>
 
 <nav>
-  <select onchange="navigateToProject(this.value)">
-    <option value="">Select a project...</option>
-    <option value="Custom Fiberglass Paddleboard">Custom Fiberglass Paddleboard</option>
-    <option value="Composite Ping Pong Paddle">Composite Ping Pong Paddle</option>
-    <option value="Automated Chicken Coop Door">Automated Chicken Coop Door</option>
-    <option value="Autonomous Boat for RobotX">Autonomous Boat for RobotX</option>
-    <option value="CrawFloat Monitor">CrawFloat Monitor</option>
-    <option value="Mystery Design Competition">Mystery Design Competition</option>
-    <option value="Robotics Competition">Robotics Competition</option>
-  </select>
+  <a href="#paddleboard">Custom Fiberglass Paddleboard</a>
+  <a href="#pingpong">Composite Ping Pong Paddle</a>
+  <a href="#coopdoor">Automated Chicken Coop Door</a>
+  <a href="#robotx">Autonomous Boat for RobotX</a>
+  <a href="#crawfloat">CrawFloat Monitor</a>
+  <a href="#mystery">Mystery Design Competition</a>
+  <a href="#robotics">Robotics Competition</a>
 </nav>
 
 <section>
@@ -125,7 +128,7 @@
     <p><strong>Outcome:</strong> Produced a functional and ergonomic paddle that improves playability.</p>
     <div class="media">
       <img src="images/pong1.jpg" alt="Custom Ping Pong Paddle">
-      <img src="pong2.jpg" alt="Custom Ping Pong Paddle 2">
+      <img src="images/pong2.jpg" alt="Custom Ping Pong Paddle 2">
     </div>
   </div>
 

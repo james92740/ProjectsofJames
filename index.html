@@ -59,36 +59,25 @@
     .media {
       margin: 15px 0;
       display: flex;
-      flex-direction: column; /* Stack images vertically */
-      align-items: center;
-      gap: 10px; /* Space between images */
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
     }
     .media img {
-      max-width: 50%; /* Set a maximum width for images */
-      height: auto; /* Maintain aspect ratio */
+      max-width: 100%;
+      height: auto;
       border-radius: 10px;
-      margin-bottom: 10px; /* Add space below each image */
     }
     .profile-pic {
-      width: 150px; /* Adjust as necessary */
-      height: auto; /* Maintain aspect ratio */
+      width: 200px;
+      height: auto;
       border-radius: 50%;
     }
-  </style>
-  <script>
-    function navigateToProject(project) {
-      const sections = {
-        "Custom Fiberglass Paddleboard": "paddleboard",
-        "Composite Ping Pong Paddle": "pingpong",
-        "Automated Chicken Coop Door": "coopdoor",
-        "Autonomous Boat for RobotX": "robotx",
-        "CrawFloat Monitor": "crawfloat",
-        "Mystery Design Competition": "mystery",
-        "Robotics Competition": "robotics",
-      };
-      window.location.hash = sections[project];
+    .small-img {
+      max-width: 50%;
+      height: auto;
     }
-  </script>
+  </style>
 </head>
 <body>
 
@@ -101,7 +90,7 @@
   <a href="#pingpong">Composite Ping Pong Paddle</a>
   <a href="#coopdoor">Automated Chicken Coop Door</a>
   <a href="#robotx">Autonomous Boat for RobotX</a>
-  <a href="#crawfloat">CrawFloat Monitor</a>
+  <a href="#resume">Resume</a>
   <a href="#mystery">Mystery Design Competition</a>
   <a href="#robotics">Robotics Competition</a>
 </nav>
@@ -114,12 +103,12 @@
 
   <div class="project" id="paddleboard">
     <h2>1. Custom Fiberglass Paddleboard</h2>
-    <p><strong>Overview:</strong> Designed and built a custom fiberglass paddleboard using composite materials for lightweight, durable performance. Timelapse of project: https://www.youtube.com/watch?v=_GtcM2HTvBo</p>
+    <p><strong>Overview:</strong> Designed and built a custom fiberglass paddleboard using composite materials for lightweight, durable performance.</p>
     <p><strong>Challenges:</strong> Working with fiberglass to ensure a smooth finish and structural integrity.</p>
     <p><strong>Outcome:</strong> Successfully created a board ideal for high-performance use, learning advanced composite techniques.</p>
     <div class="media">
-      <img src="images/paddle1.jpg" alt="Custom Paddleboard">
-      <img src="images/paddle2.jpg" alt="Custom Paddleboard 2">
+      <img src="images/paddle1.jpg" alt="Custom Paddleboard" class="small-img">
+      <img src="images/paddle2.jpg" alt="Custom Paddleboard 2" class="small-img">
     </div>
   </div>
 
@@ -155,14 +144,13 @@
     </div>
   </div>
 
-  <div class="project" id="crawfloat">
-    <h2>5. CrawFloat Monitor (In Progress)</h2>
-    <p><strong>Overview:</strong> A floating sensor device designed to monitor crawfish pond environmental factors such as water depth, pH, temperature, O2, and TDS levels.</p>
-    <p><strong>Challenges:</strong> Ensuring sensor reliability and real-time data transmission over long distances.</p>
-    <p><strong>Outcome:</strong> (Ongoing) – Aims to revolutionize water quality management for crawfish farmers.</p>
+  <div class="project" id="resume">
+    <h2>5. Resume</h2>
+    <p><strong>Overview:</strong> James's updated resume detailing skills, experiences, and professional accomplishments.</p>
+    <p><strong>Skills:</strong> Engineering, robotics, composites, and project management.</p>
+    <p><strong>Accomplishments:</strong> Major contributions in autonomous systems, composite design, and automation technologies.</p>
     <div class="media">
-      <img src="images/resume.jpg" alt="CrawFloat Monitor Project Image">
-      <!-- Add CrawFloat Monitor images/videos here -->
+      <img src="images/resume.jpg" alt="Resume Image">
     </div>
   </div>
 
@@ -173,7 +161,6 @@
     <p><strong>Outcome:</strong> Won first place by meeting all design constraints.</p>
     <div class="media">
       <img src="images/MD1.jpg" alt="Mystery Design Competition1">
-      <!-- Add Mystery Design images/videos here -->
     </div>
   </div>
 
@@ -184,11 +171,9 @@
     <p><strong>Outcome:</strong> Secured winning position by delivering a high-performing robot.</p>
     <div class="media">
       <img src="images/RC1.jpg" alt="Robotics Competition1">
-      <!-- Add Robotics Competition images/videos here -->
     </div>
   </div>
 </section>
 
 </body>
 </html>
-

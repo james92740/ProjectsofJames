@@ -46,7 +46,7 @@
       margin-bottom: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: left; /* Keep text aligned left within the project box */
+      text-align: left;
     }
     .project h2 {
       font-size: 1.8em;
@@ -59,18 +59,20 @@
     .media {
       margin: 15px 0;
       display: flex;
-      justify-content: center; /* Center the media images */
+      flex-direction: column; /* Stack images vertically */
+      align-items: center;
       gap: 10px; /* Space between images */
     }
     .media img {
-      max-width: 100%; /* Set a maximum width for images */
+      max-width: 50%; /* Set a maximum width for images */
       height: auto; /* Maintain aspect ratio */
       border-radius: 10px;
+      margin-bottom: 10px; /* Add space below each image */
     }
     .profile-pic {
-      width: 200px; /* Adjust as necessary */
+      width: 150px; /* Adjust as necessary */
       height: auto; /* Maintain aspect ratio */
-      border-radius: 50%; /* Optional: make the photo circular */
+      border-radius: 50%;
     }
   </style>
   <script>
@@ -189,3 +191,4 @@
 
 </body>
 </html>
+

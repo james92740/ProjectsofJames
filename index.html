@@ -48,8 +48,44 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: left;
     }
+    .project h2 {
+      font-size: 1.8em;
+      color: #0077b6;
+    }
+    .project p {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+    .media {
+      margin: 15px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
     .media img {
-      width: 320px;
+      width: 320px; /* Decreased image size */
+      height: auto;
+      border-radius: 10px;
+    }
+    .profile-pic {
+      width: 220px; /* Profile picture size remains */
+      height: auto;
+      border-radius: 50%;
+    }
+    .resume-section {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #e1e5f2;
+      border-radius: 10px;
+    }
+    .resume-section h2 {
+      font-size: 2em;
+      color: #0077b6;
+    }
+    .resume-section img {
+      max-width: 1000%; /* Increased width of resume image */
       height: auto;
       border-radius: 10px;
     }
@@ -70,6 +106,7 @@
   <a href="#robotics">Robotics Competition</a>
   <a href="#resume">Résumé</a>
 </nav>
+
 
 <section>
   <!-- Add content for each project and the resume section here -->

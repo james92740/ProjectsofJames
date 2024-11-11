@@ -40,6 +40,23 @@
       max-width: 900px;
       text-align: center;
     }
+    .welcome-section {
+      padding: 30px;
+      margin: 30px 0;
+      border: 5px solid #0077b6;
+      border-radius: 10px;
+      background-color: #e1e5f2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .welcome-section h2 {
+      font-size: 2.5em;
+      color: #0077b6;
+      margin-bottom: 20px;
+    }
+    .welcome-section p {
+      font-size: 1.3em;
+      line-height: 1.6;
+    }
     .project {
       background-color: #e1e5f2;
       padding: 20px;
@@ -115,10 +132,13 @@
 </nav>
 
 <section>
-  <h2>Welcome!</h2>
-  <p>Welcome to my personal project portfolio! This site is a snapshot of various projects I've worked on, including custom designs and engineering solutions. My goal is to build a successful career as a dedicated mechanical engineer, solving complex challenges while continually learning and growing. This site is just the beginning – I’ve worked on many other projects and look forward to sharing them here in the future.</p>
-  <p>I love spending time with family and friends, but I’m also a very motivated and driven engineer, trying to make an impactful career. Thanks for stopping by, and I hope you enjoy exploring my work!</p>
+  <div class="welcome-section">
+    <h2>Welcome!</h2>
+    <p>Welcome to my personal project portfolio! This site is a snapshot of various projects I've worked on, including custom designs and engineering solutions. My goal is to build a successful career as a dedicated mechanical engineer, solving complex challenges while continually learning and growing. This site is just the beginning – I’ve worked on many other projects and look forward to sharing them here in the future.</p>
+    <p>I love spending time with family and friends, but I’m also a very motivated and driven engineer, trying to make an impactful career. Thanks for stopping by, and I hope you enjoy exploring my work!</p>
+  </div>
 </section>
+
 
 <section id="about-me">
   <h2>About Me</h2>
@@ -229,6 +249,8 @@
 <footer>
   <p>Website created on: September 28, 2024</p>
   <p>Last updated: November 11, 2024</p>
+  <!-- "Back to top" button -->
+  <a href="#" class="back-to-top">Back to top</a>
 </footer>
 
 </body>
